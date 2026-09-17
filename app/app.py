@@ -20,6 +20,9 @@ pagina = st.sidebar.radio(
     ]
 )
 
+
+
+
 # ============================================================
 # PÁGINA INICIAL
 # ============================================================
@@ -104,6 +107,14 @@ if pagina == '🏠 Sobre o Projeto':
         '✅ Modelo Final Selecionado: XGBoost'
     )
 
+
+
+
+
+# ============================================================
+# EVOLUÇÃO DOS MODELOS
+# ============================================================
+
 elif pagina == '📈 Evolução dos Modelos':
 	st.title('📈 Evolução dos Modelos')
 	
@@ -144,3 +155,94 @@ st.markdown("""
     - O XGBoost apresentou o melhor equilíbrio entre Recall, Precision e AUC-ROC,
       tornando-se o modelo final selecionado.
     """)
+
+
+
+
+
+# ============================================================
+# VARIÁVEIS MAIS IMPORTANTES
+# ============================================================
+
+if pagina == '🔍 Variáveis Mais Importantes':
+
+     st.title('🔍 Variáveis Mais Importantes')
+    
+     st.markdown("""
+     Esta seção apresenta as variáveis que exercem maior influência sobre as previsões realizadas pelo modelo XGBoost.
+
+     A análise permite compreender quais fatores foram mais relevantes para a identificação da probabilidade de inadimplência dos clientes.
+
+    """)
+
+
+
+st.divider()
+# TOP 20 RANKING GRAFICO
+
+st.subheader('📊 Top 20 Variáveis Mais Importantes')
+st.image('data/processed/top20_features.png',use_container_width = True)
+
+# TOP  20TABELA
+top20 = pd.read_csv('data/processed/top20_features.csv')
+st.subheader('📋 Ranking das Variáveis')
+st.dataframe(top20,use_container_width = True)
+
+st.divider()
+
+st.subheader('💡 Principais Insights')
+
+st.info('''
+	📌Os indicadores externos de crédito (EXT_SOUCRE_2 e EXT_SOURCE_3 
+	apresentaram a maior influência sobre as previsões do modelo,
+	reforçando a importância do histórico financeiro para avaliação do risco de inadimplência.)
+''')
+
+st.info(
+        '''
+        📌 Características relacionadas à escolaridade, renda e perfil
+        socioeconômico também exerceram influência relevante na segmentação
+        dos clientes.
+        '''
+    )
+
+st.info(
+        '''
+        📌 Variáveis criadas durante a Engenharia de Features, como
+        RATIO_CREDIT_GOODS, apareceram entre os atributos mais importantes,
+        demonstrando que a criação de relações financeiras agregou valor
+        ao modelo.
+        '''
+    )
+
+st.info(
+        '''
+        📌 Flags de valores ausentes também figuraram entre as variáveis
+        relevantes, indicando que a ausência de determinadas informações
+        contém sinal preditivo útil para avaliação do risco.
+        '''
+    )
+
+st.success(
+        '''
+        ✅ Conclusão: o risco de inadimplência não é explicado por uma única
+        característica. O modelo identificou uma combinação de fatores
+        financeiros, socioeconômicos e comportamentais para distinguir
+        clientes de maior e menor risco.
+        '''
+    )
+
+
+
+
+# ============================================================
+# METODOLOGIA
+# ============================================================
+if pagina == '📚 Metodologia':
+
+    st.title('📚 Metodologia')
+
+
+# ============================================================
+# SIMULADOR DE CRÉDITO
+# ============================================================
