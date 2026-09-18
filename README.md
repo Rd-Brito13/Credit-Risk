@@ -75,7 +75,7 @@ O projeto foi desenvolvido seguindo um pipeline completo de Ciência de Dados:
 - Ajuste de Threshold
 
 ## 🏆 Resultados
-
+data/processed/compracao_modelos.png
 
 
 ## 🏆 Modelo Final
