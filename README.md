@@ -74,8 +74,20 @@ O projeto foi desenvolvido seguindo um pipeline completo de Ciência de Dados:
 - RandomizedSearchCV
 - Ajuste de Threshold
 
-## 🏆 Resultados
-![Tabela Modelos](data/processed/compracao_modelos.png)
+
+## 🏆 Principais Resultados
+
+| Modelo | Recall Classe 1 | Precision Classe 1 | AUC-ROC |
+|----------|----------|----------|----------|
+| Logistic Baseline | 0% | 0% | 0.63 |
+| Logistic + Class Weight | 57% | 11% | 0.58 |
+| Logistic + SMOTE | 44% | 10% | 0.57 |
+| Random Forest (Threshold = 0.10) | 59% | 17% | 0.73 |
+| XGBoost (Threshold = 0.37) | **74%** | **15%** | **0.758** |
+
+O modelo **XGBoost**, combinado com o ajuste de threshold para **0.37**,
+apresentou o melhor equilíbrio entre capacidade de separação das classes
+(AUC-ROC) e identificação dos clientes inadimplentes (Recall).
 
 
 ## 🏆 Modelo Final
