@@ -19,7 +19,32 @@ Base utilizada:
 
 **Home Credit Default Risk (Kaggle)**
 
-A competição tem como objetivo prever quais clientes terão dificuldades par honrar compromissoes financeiros futuros.
+O projeto foi desenvolvido utilizando exclusivamente a tabela application_train responsável por concentrar as principais informações demográficas, financeiras e cadastrais dos clientes.
+
+Embora a competição disponibilize tabelas auxiliares contendo histórico de crédito, pagamento anteriores e relacionamento financeiro, optou-se por utilizar apenas application_train como objetivo de:
+
+- Desenvolver um pipeline completo de Machine Learning com foco no processo de modelagem
+- Permitir maior controle sobre as etapas de análise e engenharia de variáveis
+- Reduzir a complexidade inicial do projeto
+- Priorizar o entendimento profundo das variáveis principais antes da integração de múltiplas fontes de dados
+
+Essa decisão permitiu concentrar os esforços na construção e interpretação do modelo, mantendo o escopo adequado para um projeto de portifólio.
+
+Limitações:
+
+Informações adicionais presente em tabelas como:
+
+- previus_application
+- bureau
+- bureau_balance
+- installments_payments
+- POS_CASH_balance
+- credit_card_balance
+
+não foram incorporadas ao processo de modelagem.
+
+A integração dessa fontes pode representar uma evolução futura do projeto, possibilidante capturar aspectos históricos e comportamentais que não estão presentes na base principal.
+
 
 Principais características:
 
@@ -150,4 +175,23 @@ Credit-Risk/
 - Missing values podem carregar informações relevantes
 - O ajuste do trheshold pode ser tão importante quanto a escolha do algortimo
 - O entendimento do negocio é fundamental para interpratação das métricas.
+
+## 🔮 Evoluções Futuras
+
+Embora os resultados obtidos tenham sido satisfatórios para os objetivos do projeto, existem diversas oportunidades de evolução que podem ampliar a capacidade preditiva e a aplicabilidade da solução.
+
+Possíveis desenvolvimentos futuros incluem:
+
+- Integração das tabelas auxiliares disponibilizadas pela competição, como bureau, previus_application, install_payments e credit_card_balance
+- Criação de novas variáveis comportamentais e agregações históricas relacionadas ao perfil financeiro dos clientes
+- Exploração de técnicas mais avançadas de seleção de variáveis e otimização de hiperparâmetros
+- Calibração das probabilidades previstas pelo modelo
+- Avaliação de métricas de negócio especificas para risco de crédito, incorporando custos associadoas aos diferentes tipos de erro
+- Desenvolvimento de um dashboard interarivo utilizando Streamelit para simução de cenários e apoio a tomada de decisão
+
+## Contato
+Rodrigo Brito
+📧 brito.rd13@gmail.com
+💼 https://www.linkedin.com/in/rodrigo-brito-a4393a277/
+
 
