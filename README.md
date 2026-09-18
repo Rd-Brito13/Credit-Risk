@@ -7,13 +7,13 @@ O projeto foi desenvolvido utilizando a base Home Credit Default Risk, disponibi
 Ao longo do desenvolvimento foram aplicadas ténicas de análise exploratória, engenharia de variáveis, tratamento de classes desbalanceadas, modelagem, otimização de hiperparâmetros e interpretação dos resultados.
 
 
-##🎯 Objetivo
+## 🎯 Objetivo
 
 Desenvolver um modelo capaz de estimar a probabilidade de inadimplência de clientes que solicitam crédito, utilizando informações financeiro, demográficas e comportamentais.
 
 O foco principal do projeto foi compreender os fatores associados ao risco de crédito e construir um fluxo completo de Machine Learning alinhado a problemas reais encontrados em instituições financeiras.
 
-##📊  Dataset
+## 📊  Dataset
 
 Base utilizada:
 
@@ -108,9 +108,9 @@ Os principais fatores associados ao risco de inadimplência foram:
 - XGBoost
 - Jupyter Notebook
 
-##📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
-##📚 Principais Aprendizados
+## 📚 Principais Aprendizados
 
 - Acurácia pode ser enganosa em bases desbalanceadas
 - Missing values podem carregar informações relevantes
