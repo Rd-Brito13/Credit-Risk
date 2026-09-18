@@ -110,6 +110,28 @@ Os principais fatores associados ao risco de inadimplência foram:
 
 ## 📁 Estrutura do Projeto
 
+Credit-Risk/
+
+├─ data/
+
+│  └─ application_train.csv <- Base de dados utilizada
+
+│  └─ processed/ Features_processed.csv, Target_processed.csv, top20_features.csv, compracao_modelos.csv, comparacao_modelos.png, top20_features.png <- Features e target pre-processados, tabelas e graficos utilizados ao decorrer do projeto
+
+├─ models/
+
+│ └─ XGB_credit_risk.pkl <- Modelo Campeão
+
+├─ notebooks/
+
+│  └─ 01_eda, 02_feature_engineering, 03_modelo_baseline, 04_modelos_avancados, 05_otimizacao_e_tuning, 06_conclusoes_e_business_insights <- Notebooks desenvolvidos ao decorrer do projeto
+
+├─ requirements/ 
+
+│ └─ requirements.txt <- Dependências do Projeto
+
+└─ README.md <- Documentação do projeto
+
 ## 📚 Principais Aprendizados
 
 - Acurácia pode ser enganosa em bases desbalanceadas
