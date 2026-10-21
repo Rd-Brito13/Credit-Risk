@@ -5,3 +5,8 @@ data/
 
 .ipynb_checkpoints/
 notebooks/.ipynb_checkpoints/
+
+src/__pycache__/
+src/Classes/__pycache__/
+
+credit_risk_scr.egg-info/
